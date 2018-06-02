@@ -34,7 +34,7 @@ public class WordRepository {
         private WordDao mAsyncTaskDao;
 
         insertAsyncTask(WordDao dao) {
-
+            mAsyncTaskDao = dao;
         }
 
         @Override
