@@ -1,4 +1,4 @@
-package com.coesta.roomwordsample;
+package com.coesta.roomwordsample.ui;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.coesta.roomwordsample.R;
 import com.coesta.roomwordsample.ui.WordListAdapter;
 
 public class MainActivity extends AppCompatActivity {
