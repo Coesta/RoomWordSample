@@ -14,7 +14,7 @@ import java.util.List;
 
 public class WordListAdapter extends RecyclerView.Adapter<WordListAdapter.WordViewHolder> {
 
-    class WordViewHolder extends RecyclerView.ViewHolder{
+    class WordViewHolder extends RecyclerView.ViewHolder {
 
         private final TextView wordItemView;
 
@@ -39,13 +39,16 @@ public class WordListAdapter extends RecyclerView.Adapter<WordListAdapter.WordVi
 
     @Override
     public void onBindViewHolder(WordViewHolder holder, int position) {
-        if (mWords != null){
+        if (mWords != null) {
             Word current = mWords.get(position);
-            holder.wordItemView.setText("No Word");
+            holder.wordItemView.setText(current.getmWord());
+        } else {
+            //Covers the case of data not being ready yet
+            holder.wordItemView.setText("Vazio");
         }
     }
 
-    void setWords(List<Word> words){
+    void setWords(List<Word> words) {
         mWords = words;
         notifyDataSetChanged();
     }
